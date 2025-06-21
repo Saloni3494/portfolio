@@ -126,6 +126,8 @@ function Home() {
         </div>
       </header>
 
+      
+
       {/* HOME SECTION START */}
       <section className="home">
         <div className="container">
@@ -148,9 +150,9 @@ function Home() {
             </div>
             <div className="col-lg-6">
               <img
-                src={`${process.env.PUBLIC_URL}/Assets/Images/Icons/process-icon-2.svg`}
+                src={`${process.env.PUBLIC_URL}/Assets/Images/first-profile.jpg`}
                 alt="Process Icon"
-                style={{ width: "80%", filter: "invert(100%)" }}
+                style={{ width: "90%", borderRadius: "50%" }}
               />
             </div>
           </div>
@@ -167,6 +169,10 @@ function Home() {
         </div>
       </section>
       {/* HOME SECTION END */}
+
+      <div className="divider">
+        <hr />
+      </div>
 
       {/* ABOUT SECTION START */}
       <section id="about" className="about">
@@ -253,26 +259,30 @@ function Home() {
                 </h2>
                 <p style={{ textAlign: "left" }}>
                   Passionate about building tech that solves real-world
-                  problems. <br></br><br></br>
-                  Strong Communication Skills, and a Proven Track
-                  Record in Frontend, Backend, and Software Development. A
-                  Dedicated Problem Solver and Collaborative Team Player.
-                  Technology excites me and I am always in awe of the change it
-                  drives in the world. <br></br><br></br>
-                  Technical Proficiency: <br></br>
-                  🔹Languages:
-                  Proficient in Python, PHP, Java, C, C++, JavaScript <br></br>
-                  🔹Frameworks & Stack: <br></br> - .NET<br></br> - MERN Stack <br></br>- Flask (Python Web
-                  Framework)<br></br> - Eel (Python + JS desktop apps)<br></br> 🔹Database: MySQL,
-                  SQLite3, MongoDB<br></br> 🔹Tools & Technologies: Git, AWS, Google
-                  Cloud, Firebase 
-                  <br></br><br></br>I’m also actively solving DSA problems,
-                  building consistency (100+ days and counting!), and
-                  participating in tech communities like GSSoC, IIRS-ISRO, and
-                  Google Cloud Arcade. 
+                  problems. <br></br>
                   <br></br>
-                  <br></br>And what I might lack in skills I make up
-                  for with my determination to learn.
+                  Strong Communication Skills, and a Proven Track Record in
+                  Frontend, Backend, and Software Development. A Dedicated
+                  Problem Solver and Collaborative Team Player. Technology
+                  excites me and I am always in awe of the change it drives in
+                  the world. <br></br>
+                  <br></br>
+                  Technical Proficiency: <br></br>
+                  🔹Languages: Proficient in Python, PHP, Java, C, C++,
+                  JavaScript <br></br>
+                  🔹Frameworks & Stack: <br></br> - .NET<br></br> - MERN Stack{" "}
+                  <br></br>- Flask (Python Web Framework)<br></br> - Eel (Python
+                  + JS desktop apps)<br></br> 🔹Database: MySQL, SQLite3,
+                  MongoDB<br></br> 🔹Tools & Technologies: Git, AWS, Google
+                  Cloud, Firebase
+                  <br></br>
+                  <br></br>I’m also actively solving DSA problems, building
+                  consistency (100+ days and counting!), and participating in
+                  tech communities like GSSoC, IIRS-ISRO, and Google Cloud
+                  Arcade.
+                  <br></br>
+                  <br></br>And what I might lack in skills I make up for with my
+                  determination to learn.
                 </p>
               </div>
 
@@ -300,10 +310,14 @@ function Home() {
               </div> */}
 
               <div>
-                <h2 className="section-title"><b>MY MISSION</b></h2>
+                <h2 className="section-title">
+                  <b>MY MISSION</b>
+                </h2>
                 <p>
-                  My goal is to build engaging, accessible, and high-performing web experiences that create a meaningful impact. 
-                  I’m dedicated to writing clean, maintainable code and constantly growing my expertise in modern web development.
+                  My goal is to build engaging, accessible, and high-performing
+                  web experiences that create a meaningful impact. I’m dedicated
+                  to writing clean, maintainable code and constantly growing my
+                  expertise in modern web development.
                 </p>
               </div>
 
@@ -315,36 +329,32 @@ function Home() {
         </div>
       </section>
       {/* ABOUT SECTION END */}
+   
 
-      {/* WORK SECTION START */}
+      <div className="divider">
+        <hr />
+      </div>
+
+   <br></br>
+      {/* PROJECT SECTION START */}
       <section id="works" className="portfolio">
         <div className="container">
           <div className="hero-section">
             <div className="row align-items-center">
               <div className="col-lg-6">
-                <h1 id="text-work">WORKS</h1>
+                <h1 id="text-work">PROJECTS</h1>
               </div>
               <div className="col-lg-6">
                 <span className="section-label">explore</span>
                 <br />
-                <p className="description">
-                  Gorgeous design. Scroll-stopping content. Memorable campaigns.
-                  Development dripping with tech. The proof is in our projects.
-                </p>
               </div>
             </div>
           </div>
 
           <div className="row portfolio-grid">
-            <div className="col-md-6 portfolio-card">
-              <div
-                className="media"
-                style={{
-                  overflowX: "auto",
-                  display: "flex",
-                  justifyContent: "center",
-                }}
-              >
+            {/* PROJECT 1 */}
+            <div className="col-md-6">
+              <div className="media" style={{ flex: 1 }}>
                 <a
                   href="https://github.com/SwapnilDey-git/InsightFlow"
                   target="_blank"
@@ -363,7 +373,7 @@ function Home() {
                   />
                 </a>
               </div>
-              <div className="card-overlay">
+              <div style={{ flex: 1, padding: "20px" }}>
                 <h2 className="project-title">INSIGHTFLOW</h2>
                 <div className="project-details">
                   <span>DATA ANALYTICS</span>
@@ -373,84 +383,47 @@ function Home() {
               </div>
             </div>
 
-            <div className="col-md-6 portfolio-card">
-              <a
-                href="https://github.com/SwapnilDey-git/assistance"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ textDecoration: "none", color: "inherit" }}
-              >
-                <div className="media">
-                  <img
-                    src={`${process.env.PUBLIC_URL}/Assets/Images/Works/asssistencia-1.png`}
-                    alt="Blog Project"
-                    className="portfolio-image"
-                  />
-                </div>
-                <div className="card-overlay">
-                  <h2 className="project-title">ASSISTENCIA</h2>
-                  <div className="project-details">
-                    <span>ML AND AI</span>
-                    <span>(FULL STACK)</span>
-                    <span>[01]</span>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div className="col-md-6 portfolio-card">
-              <div className="media">
+            {/* PROJECT 2 */}
+            <div className="col-md-6">
+              <div className="media" style={{ flex: 1 }}>
                 <a
-                  href="https://github.com/SwapnilDey-git/assistance"
+                  href="https://github.com/SwapnilDey-git/InsightFlow"
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ textDecoration: "none", color: "inherit" }}
                 >
                   <img
-                    src={`${process.env.PUBLIC_URL}/Assets/Images/Works/02-LINKIN-PARK.webp`}
-                    alt="Music Project"
+                    src={`${process.env.PUBLIC_URL}/Assets/Images/Works/insightflow-1.gif`}
+                    alt="InsightFlow App"
                     className="portfolio-image"
+                    style={{
+                      width: "100%",
+                      objectFit: "contain",
+                      filter: "invert(100%)",
+                    }}
                   />
                 </a>
               </div>
-              <div className="card-overlay">
-                <h2 className="project-title">LINKIN PARK</h2>
+              <div style={{ flex: 1, padding: "20px" }}>
+                <h2 className="project-title">INSIGHTFLOW</h2>
                 <div className="project-details">
-                  <span>HTML PROJECT</span>
-                  <span>(DEMO SITE)</span>
-                  <span>[03]</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-md-6 portfolio-card">
-              <div className="media">
-                <a
-                  href="https://github.com/SwapnilDey-git/Alanzo"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ textDecoration: "none", color: "inherit" }}
-                >
-                  <img
-                    src={`${process.env.PUBLIC_URL}/Assets/Images/Works/Alanzo12-min.gif`}
-                    alt="Catering Project"
-                    className="portfolio-image"
-                  />
-                </a>
-              </div>
-              <div className="card-overlay">
-                <h2 className="project-title">ALANZO</h2>
-                <div className="project-details">
-                  <span>CATERING</span>
-                  <span>(DEMO SITE)</span>
-                  <span>[04]</span>
+                  <span>DATA ANALYTICS</span>
+                  <span>(MOBILE APP)</span>
+                  <span>[02]</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      {/* WORK SECTION END */}
+      {/* PROJECT SECTION END */}
+
+
+      <div className="divider">
+        <hr />
+      </div>
+
+      <br></br>
 
       {/* MARQUEE STACKS SECTION START */}
       <section className="marquee-stacks">
@@ -564,6 +537,11 @@ function Home() {
         </div>
       </section>
       {/* <!-- MARQUEE STACKS SECTION END --> */}
+        
+      <br></br>
+      <div className="divider">
+        <hr />
+      </div>
 
       {/* EXPERIENCE SECTION START */}
       <section id="experience" className="experience">
@@ -592,33 +570,33 @@ function Home() {
                   />
                   <div>
                     <p className="company-name">Edunet Foundation</p>
-                    <h3 className="position-title">
-                      AI and Cloud Intern
-                    </h3>
+                    <h3 className="position-title">AI and Cloud Intern</h3>
                   </div>
                 </div>
                 <div className="col-4 text-end">
                   <span className="date ms-auto d-none d-md-inline">
                     [ DECEMBER/2024 - JANUARY/2024 ]
                   </span>
-                  
                 </div>
               </div>
               <p className="description">
                 <ul>
                   <li>
-                     Internship Training : Successfully attended internship training, receiving
-                      commendations for adaptability and problem-solving.
+                    Internship Training : Successfully attended internship
+                    training, receiving commendations for adaptability and
+                    problem-solving.
                   </li>
                   <br></br>
                   <li>
-                    Version Control : Implemented version control strategies with IBM Cloud
-                    improving code collaboration and analytical efficiency by 30% .
+                    Version Control : Implemented version control strategies
+                    with IBM Cloud improving code collaboration and analytical
+                    efficiency by 30% .
                   </li>
                   <br></br>
                   <li>
-                    During my online internship, I developed a chatbot using IBM Watsonx
-                    Assistant on IBM Cloud and deployed it on WhatsApp via Twilio.
+                    During my online internship, I developed a chatbot using IBM
+                    Watsonx Assistant on IBM Cloud and deployed it on WhatsApp
+                    via Twilio.
                   </li>
                 </ul>
               </p>
@@ -666,6 +644,10 @@ function Home() {
       </section>
       {/* EXPERIENCE SECTION END */}
 
+      <div className="divider">
+        <hr />
+      </div>
+
       {/* MEMBERSHIP SECTION START */}
       <section id="membership" className="membership">
         <div className="container membership-section">
@@ -695,7 +677,9 @@ function Home() {
                     className="membership-logo"
                   />
                   <div>
-                    <p className="membership-name">Rotaract Club of Pune Vibrant Elite[RCPV]</p>
+                    <p className="membership-name">
+                      Rotaract Club of Pune Vibrant Elite[RCPV]
+                    </p>
                     <h3 className="membership-title">
                       Position: Professional Development Director
                     </h3>
@@ -714,8 +698,9 @@ function Home() {
               <p className="description" style={{ fontSize: "1.3rem" }}>
                 <ul>
                   <li>
-                     A dynamic and vibrant community of young professionals committed to make a positive impact on our local and
-                    global communities.
+                    A dynamic and vibrant community of young professionals
+                    committed to make a positive impact on our local and global
+                    communities.
                   </li>
                 </ul>
                 <strong style={{ fontSize: "1.5rem" }}>
@@ -921,7 +906,7 @@ function Home() {
           <div className="row align-items-center mb-5">
             <div className="col-md-9 text-center">
               <h1 className="main-heading">
-                LET'S BUILD A  
+                LET'S BUILD A
                 <br />
                 DIGITAL PRESENCE
               </h1>
@@ -966,7 +951,7 @@ function Home() {
                 >
                   FIVERR
                 </a> */}
-            
+
                 <a
                   href="mailto:saloni.tanmor1@gmail.com"
                   className="social-icon"
