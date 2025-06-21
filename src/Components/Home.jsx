@@ -352,33 +352,33 @@ function Home() {
           </div>
 
           <div className="row portfolio-grid">
+
             {/* PROJECT 1 */}
             <div className="col-md-6">
               <div className="media" style={{ flex: 1 }}>
                 <a
-                  href="https://github.com/SwapnilDey-git/InsightFlow"
+                  href="https://github.com/KnownAsDevelopers0680/Advanced-Surveillance-System"
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ textDecoration: "none", color: "inherit" }}
                 >
                   <img
-                    src={`${process.env.PUBLIC_URL}/Assets/Images/Works/insightflow-1.gif`}
+                    src={`${process.env.PUBLIC_URL}/Assets/Images/Works/1-SurveilX.gif`}
                     alt="InsightFlow App"
                     className="portfolio-image"
                     style={{
                       width: "100%",
                       objectFit: "contain",
-                      filter: "invert(100%)",
                     }}
                   />
                 </a>
               </div>
               <div style={{ flex: 1, padding: "20px" }}>
-                <h2 className="project-title">INSIGHTFLOW</h2>
+                <h2 className="project-title">SURVEILX </h2><br></br><h3>An Advanced Surveillance System</h3><br></br>
                 <div className="project-details">
-                  <span>DATA ANALYTICS</span>
-                  <span>(MOBILE APP)</span>
-                  <span>[02]</span>
+                  {/* <span>PYTHON DEVELOPMENT</span> */}
+                  <span>(DESKTOP APP)</span>
+                  <span>[01]</span>
                 </div>
               </div>
             </div>
@@ -387,29 +387,58 @@ function Home() {
             <div className="col-md-6">
               <div className="media" style={{ flex: 1 }}>
                 <a
-                  href="https://github.com/SwapnilDey-git/InsightFlow"
+                  href="https://github.com/Saloni3494/FertilizerApplication"
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ textDecoration: "none", color: "inherit" }}
                 >
                   <img
-                    src={`${process.env.PUBLIC_URL}/Assets/Images/Works/insightflow-1.gif`}
-                    alt="InsightFlow App"
+                    src={`${process.env.PUBLIC_URL}/Assets/Images/Works/2-Agrovate.png`}
+                    alt="Agrovate App"
                     className="portfolio-image"
                     style={{
                       width: "100%",
-                      objectFit: "contain",
-                      filter: "invert(100%)",
+                      objectFit: "contain"
                     }}
                   />
                 </a>
               </div>
               <div style={{ flex: 1, padding: "20px" }}>
-                <h2 className="project-title">INSIGHTFLOW</h2>
+                <h2 className="project-title">AGROVATE</h2><br></br><h3>Agricultural Solution</h3><br></br>
                 <div className="project-details">
-                  <span>DATA ANALYTICS</span>
-                  <span>(MOBILE APP)</span>
+                  {/* <span>DATA ANALYTICS</span> */}
+                  <span>(DESKTOP APP)</span>
                   <span>[02]</span>
+                </div>
+              </div>
+            </div>
+
+            {/* PROJECT 3 */}
+            <div className="col-md-6">
+              <div className="media" style={{ flex: 1 }}>
+                <a
+                  href="https://github.com/Saloni3494/WomenSafety"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  <img
+                    src={`${process.env.PUBLIC_URL}/Assets/Images/Works/3-EmpowerShield.png`}
+                    alt="Empower Shield"
+                    className="portfolio-image"
+                    style={{
+                      width: "100%",
+                      objectFit: "contain"
+                    }}
+                  />
+                </a>
+              </div>
+              <div style={{ flex: 1, padding: "20px" }}>
+                <h2 className="project-title">EMPOWER SHIELD</h2><br></br><h3>Women Safety</h3><br></br>
+                <div className="project-details">
+                  {/* <span>DATA ANALYTICS</span> */}
+                  <span>(WEB APP)</span>
+                  <span>[03]</span>
                 </div>
               </div>
             </div>
@@ -648,7 +677,7 @@ function Home() {
         <hr />
       </div>
 
-      {/* MEMBERSHIP SECTION START */}
+      {/* ORGANIZATION SECTION START */}
       <section id="membership" className="membership">
         <div className="container membership-section">
           <div className="d-flex justify-content-between align-items-start">
@@ -703,9 +732,9 @@ function Home() {
                     communities.
                   </li>
                 </ul>
-                <strong style={{ fontSize: "1.5rem" }}>
+                {/* <strong style={{ fontSize: "1.5rem" }}>
                   Membership No: 521072
-                </strong>
+                </strong> */}
               </p>
             </div>
           </div>
