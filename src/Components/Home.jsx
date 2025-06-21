@@ -472,6 +472,36 @@ function Home() {
                 </div>
               </div>
             </div>
+
+            {/* PROJECT 5 */}
+            <div className="col-md-6">
+              <div className="media" style={{ flex: 1 }}>
+                <a
+                  // href="https://github.com/Saloni3494/WomenSafety"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  <img
+                    src={`${process.env.PUBLIC_URL}/Assets/Images/Works/5-CollegeBot.png`}
+                    alt="College Bot"
+                    className="portfolio-image"
+                    style={{
+                      width: "100%",
+                      objectFit: "contain"
+                    }}
+                  />
+                </a>
+              </div>
+              <div style={{ flex: 1, padding: "20px" }}>
+                <h2 className="project-title">COLLEGE BOT</h2><br></br><h3>Deployed on Whatsapp</h3><br></br>
+                <div className="project-details">
+                  {/* <span>DATA ANALYTICS</span> */}
+                  <span>(CHATBOT)</span>
+                  <span>[05]</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
