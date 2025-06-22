@@ -1308,15 +1308,28 @@ a {
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Great+Vibes&display=swap');
 
+/* Smooth fade and slide-in */
+
 .hero-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 90vh;
-  text-align: center;
-  background-color: #fff;
-  flex-direction: column;
+    animation: fadeSlideIn 1.2s ease-in-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    text-align: center;
+    background-color: #fff;
+    flex-direction: column;
 }
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 .hero-content {
   display: flex;
@@ -1324,19 +1337,56 @@ a {
   gap: 1rem;
 }
 
+/* Name with a slight scale and opacity transition */
 .name {
+  animation: scaleIn 1s ease-in-out forwards;
+  opacity: 0;
+  transform: scale(0.9);
   font-size: 4rem;
+  font-weight: bold;
   color: #111;
   margin-bottom: 0.2rem;
 }
 
+@keyframes scaleIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animated role text effect */
 .animated-role {
+  font-weight: 500;
+  opacity: 0;
+  animation: fadeInText 1.5s ease-in forwards;
+  animation-delay: 0.5s;
   font-family: 'Montserrat', sans-serif;
   font-size: normal;
   color: #555;
   transition: opacity 0.5s ease-in-out;
   letter-spacing: 2px;
   text-transform: uppercase;
+}
+
+@keyframes fadeInText {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Profile image smooth pop */
+.col-lg-6 img {
+  animation: imgPop 1.4s ease-out forwards;
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+@keyframes imgPop {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 

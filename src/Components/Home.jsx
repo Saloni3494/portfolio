@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Home() {
   const roles = ["Developer", "AI/ML", "Enthusiast"];
@@ -13,6 +15,10 @@ function Home() {
 
     return () => clearInterval(interval);
   }, [roles.length]);
+
+  useEffect(() => {
+  AOS.init({ duration: 1000 });
+}, []);
 
   return (
     <div>
@@ -113,7 +119,7 @@ function Home() {
                       src={`${process.env.PUBLIC_URL}/Assets/Images/Icons/arrow.svg`}
                       alt="arrow"
                     />
-                    {/* <a href="https://www.fiverr.com/s/P2N2Gqxs" className="social-icon" target="_blank" rel="noopener noreferrer">FIVERR</a> */}
+                    {/* <a href="https://www.fiverr.com/s/" className="social-icon" target="_blank" rel="noopener noreferrer">FIVERR</a> */}
                     <img
                       src={`${process.env.PUBLIC_URL}/Assets/Images/Icons/arrow.svg`}
                       alt="arrow"
@@ -175,11 +181,11 @@ function Home() {
       </div>
 
       {/* ABOUT SECTION START */}
-      <section id="about" className="about">
+      <section id="about" className="about" data-aos="fade-up">
         <div className="container">
           <div className="row mb-4">
             <div className="col-md-8">
-              <h1 id="text-about">ABOUT</h1>
+              <h1 id="text-about" data-aos="fade-up">ABOUT</h1>
               <h5 className="subtitle">
                 {/* <u className="underlined">CREATING WEBSITES FROM EMPTINESS</u> */}
               </h5>
@@ -350,12 +356,12 @@ function Home() {
 
    <br></br>
       {/* PROJECT SECTION START */}
-      <section id="works" className="portfolio">
+      <section id="works" className="portfolio" data-aos="fade-up">
         <div className="container">
           <div className="hero-section">
             <div className="row align-items-center">
               <div className="col-lg-6">
-                <h1 id="text-work">PROJECTS</h1>
+                <h1 id="text-work" data-aos="fade-up">PROJECTS</h1>
               </div>
               <div className="col-lg-6">
                 <span className="section-label">explore</span>
@@ -367,7 +373,7 @@ function Home() {
           <div className="row portfolio-grid">
 
             {/* PROJECT 1 */}
-            <div className="col-md-6">
+            <div className="col-md-6" data-aos="fade-up">
               <div className="media" style={{ flex: 1 }}>
                 <a
                   href="https://github.com/KnownAsDevelopers0680/Advanced-Surveillance-System"
@@ -409,7 +415,7 @@ function Home() {
             </div>
 
             {/* PROJECT 2 */}
-            <div className="col-md-6">
+            <div className="col-md-6" data-aos="fade-up">
               <div className="media" style={{ flex: 1 }}>
                 <a
                   href="https://github.com/Saloni3494/FertilizerApplication"
@@ -428,18 +434,26 @@ function Home() {
                   />
                 </a>
               </div>
-              <div style={{ flex: 1, padding: "20px" }}>
-                <h2 className="project-title">AGROVATE</h2><br></br><h3>Agricultural Solution</h3><br></br>
+              <div className="project-card" style={{ flex: 1, padding: "20px" }}>
+                <h2 className="project-title">AGROVATE</h2><hr></hr><h3>Agricultural Solution</h3>
                 <div className="project-details">
-                  {/* <span>DATA ANALYTICS</span> */}
-                  <span>(DESKTOP APP)</span>
-                  <span>[02]</span>
+                  <div className="tech-stack-section">
+                    <h5>Technology Stack:</h5>
+                    <div className="tech-stack-buttons">
+                      {[
+                        "Python", "YOLOv5", "OpenCV", "NumPy",
+                        "Flask", "SQLite3", "Eel", "Twilio", "SMTP"
+                      ].map((tech, index) => (
+                        <span className="tech-chip" key={index}>{tech}</span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* PROJECT 3 */}
-            <div className="col-md-6">
+            <div className="col-md-6" data-aos="fade-up">
               <div className="media" style={{ flex: 1 }}>
                 <a
                   href="https://github.com/Saloni3494/WomenSafety"
@@ -458,18 +472,26 @@ function Home() {
                   />
                 </a>
               </div>
-              <div style={{ flex: 1, padding: "20px" }}>
-                <h2 className="project-title">EMPOWER SHIELD</h2><br></br><h3>Women Safety</h3><br></br>
+              <div className="project-card" style={{ flex: 1, padding: "20px" }}>
+                <h2 className="project-title">EMPOWER SHIELD</h2><hr></hr><h3>Women Safety</h3>
                 <div className="project-details">
-                  {/* <span>DATA ANALYTICS</span> */}
-                  <span>(WEB APP)</span>
-                  <span>[03]</span>
+                  <div className="tech-stack-section">
+                    <h5>Technology Stack:</h5>
+                    <div className="tech-stack-buttons">
+                      {[
+                        "Python", "YOLOv5", "OpenCV", "NumPy",
+                        "Flask", "SQLite3", "Eel", "Twilio", "SMTP"
+                      ].map((tech, index) => (
+                        <span className="tech-chip" key={index}>{tech}</span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* PROJECT 4 */}
-            <div className="col-md-6">
+            <div className="col-md-6" data-aos="fade-up">
               <div className="media" style={{ flex: 1 }}>
                 <a
                   href="https://github.com/Saloni3494/WomenSafety"
@@ -488,18 +510,26 @@ function Home() {
                   />
                 </a>
               </div>
-              <div style={{ flex: 1, padding: "20px" }}>
-                <h2 className="project-title">SOFIA</h2><br></br><h3>Desktop AI Voice Assistant</h3><br></br>
+              <div className="project-card" style={{ flex: 1, padding: "20px" }}>
+                <h2 className="project-title">SOFIA</h2><hr></hr><h3>Desktop AI Voice Assistant</h3>
                 <div className="project-details">
-                  {/* <span>DATA ANALYTICS</span> */}
-                  <span>(DESKTOP APP)</span>
-                  <span>[04]</span>
+                  <div className="tech-stack-section">
+                    <h5>Technology Stack:</h5>
+                    <div className="tech-stack-buttons">
+                      {[
+                        "Python", "SpeechRecognition", "gTTS", "Flask",
+                        "SQLite3", "Eel", "Twilio", "SMTP"
+                      ].map((tech, index) => (
+                        <span className="tech-chip" key={index}>{tech}</span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* PROJECT 5 */}
-            <div className="col-md-6">
+            <div className="col-md-6" data-aos="fade-up">
               <div className="media" style={{ flex: 1 }}>
                 <a
                   // href="https://github.com/Saloni3494/WomenSafety"
@@ -518,12 +548,19 @@ function Home() {
                   />
                 </a>
               </div>
-              <div style={{ flex: 1, padding: "20px" }}>
-                <h2 className="project-title">COLLEGE BOT</h2><br></br><h3>Deployed on Whatsapp</h3><br></br>
+              <div className="project-card" style={{ flex: 1, padding: "20px" }}>
+                <h2 className="project-title">COLLEGE BOT</h2><hr></hr><h3>Deployed on Whatsapp</h3>
                 <div className="project-details">
-                  {/* <span>DATA ANALYTICS</span> */}
-                  <span>(CHATBOT)</span>
-                  <span>[05]</span>
+                  <div className="tech-stack-section">
+                    <h5>Technology Stack:</h5>
+                    <div className="tech-stack-buttons">
+                      {[
+                        "Python", "Flask", "Twilio", "SQLite3"
+                      ].map((tech, index) => (
+                        <span className="tech-chip" key={index}>{tech}</span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -658,17 +695,17 @@ function Home() {
       </div>
 
       {/* EXPERIENCE SECTION START */}
-      <section id="experience" className="experience">
+      <section id="experience" className="experience" >
         <div className="container experience-section">
           <div className="d-flex justify-content-between align-items-start">
             <div>
-              <h1 id="text-experience">EXPERIENCE</h1>
+              <h1 id="text-experience" data-aos="fade-up">EXPERIENCE</h1>
               <p className="subtitle">SHOWCASING MY DEVELOPMENT JOURNEY</p>
             </div>
-            <span className="section-label">2022 - present</span>
+            <span className="section-label">2024 - present</span>
           </div>
 
-          <div className="experience-items">
+          <div className="experience-items" data-aos="fade-up">
             <div className="blob blob1"></div>
             <div className="blob blob2"></div>
             <div className="blob blob3"></div>
@@ -767,7 +804,7 @@ function Home() {
         <div className="container membership-section">
           <div className="d-flex justify-content-between align-items-start">
             <div>
-              <h1 id="text-membership">ORGANIZATION</h1>
+              <h1 id="text-membership" data-aos="fade-up">ORGANIZATION</h1>
               <p className="subtitle">
                 HIGHLIGHTING MY PROFESSIONAL ASSOCIATIONS
               </p>
@@ -775,7 +812,7 @@ function Home() {
             <span className="section-label">2024 - present</span>
           </div>
 
-          <div className="membership-items">
+          <div className="membership-items" data-aos="fade-up">
             <div className="blob blob1"></div>
             <div className="blob blob2"></div>
             <div className="blob blob3"></div>
@@ -834,7 +871,7 @@ function Home() {
         <div className="container stack-section">
           <div className="d-flex justify-content-between align-items-start">
             <div>
-              <h1 id="text-stack" className="stack-header">
+              <h1 id="text-stack" className="stack-header" data-aos="fade-up">
                 MY SKILLS
               </h1>
               <p className="subtitle">EXPLORE MY CURATED TOP DESIGN PICKS</p>
@@ -843,7 +880,7 @@ function Home() {
           </div>
 
           <div className="stack-items">
-            <div className="stack-item">
+            <div className="stack-item" data-aos="fade-up">
               <div className="d-flex mb-3">
                 <img
                   src={`${process.env.PUBLIC_URL}/Assets/Images/stack-logos/html-1.svg`}
@@ -863,7 +900,7 @@ function Home() {
               </p>
             </div>
 
-            <div className="stack-item">
+            <div className="stack-item" data-aos="fade-up">
               <div className="d-flex mb-3">
                 <img
                   src={`${process.env.PUBLIC_URL}/Assets/Images/stack-logos/css-3.svg`}
@@ -883,7 +920,7 @@ function Home() {
               </p>
             </div>
 
-            <div className="stack-item">
+            <div className="stack-item" data-aos="fade-up">
               <div className="d-flex mb-3">
                 <img
                   src={`${process.env.PUBLIC_URL}/Assets/Images/stack-logos/bootstrap-5-1.svg`}
@@ -904,7 +941,7 @@ function Home() {
               </p>
             </div>
 
-            <div className="stack-item">
+            <div className="stack-item" data-aos="fade-up">
               <div className="d-flex mb-3">
                 <img
                   src={`${process.env.PUBLIC_URL}/Assets/Images/stack-logos/javascript-1.svg`}
@@ -925,7 +962,7 @@ function Home() {
               </p>
             </div>
 
-            <div className="stack-item">
+            <div className="stack-item" data-aos="fade-up">
               <div className="d-flex mb-3">
                 <img
                   src={`${process.env.PUBLIC_URL}/Assets/Images/stack-logos/python-5.svg`}
@@ -945,7 +982,7 @@ function Home() {
               </p>
             </div>
 
-            <div className="stack-item">
+            <div className="stack-item" data-aos="fade-up">
               <div className="d-flex mb-3">
                 <img
                   src={`${process.env.PUBLIC_URL}/Assets/Images/stack-logos/django.svg`}
@@ -966,7 +1003,7 @@ function Home() {
               </p>
             </div>
 
-            <div className="stack-item">
+            <div className="stack-item" data-aos="fade-up">
               <div className="d-flex mb-3">
                 <img
                   src={`${process.env.PUBLIC_URL}/Assets/Images/stack-logos/postgresql.svg`}
@@ -987,7 +1024,7 @@ function Home() {
               </p>
             </div>
 
-            <div className="stack-item">
+            <div className="stack-item" data-aos="fade-up">
               <div className="d-flex mb-3">
                 <img
                   src={`${process.env.PUBLIC_URL}/Assets/Images/stack-logos/docker-4.svg`}
@@ -1019,7 +1056,7 @@ function Home() {
         <div className="container">
           <div className="row align-items-center mb-5">
             <div className="col-md-9 text-center">
-              <h1 className="main-heading">
+              <h1 className="main-heading" data-aos="fade-up">
                 LET'S BUILD A
                 <br />
                 DIGITAL PRESENCE
