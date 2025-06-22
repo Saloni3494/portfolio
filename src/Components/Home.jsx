@@ -1088,7 +1088,7 @@ function Home() {
       {/* FOOTER SECTION END */}
 
       {/* Terminal Button Section */}
-      <div
+      {/* <div
         style={{
           display: "flex",
           justifyContent: "center",
@@ -1132,10 +1132,10 @@ function Home() {
             <i className="fa-solid fa-arrow-right"></i>
           </span>
         </button>
-      </div>
+      </div> */}
 
       {/* Floating Terminal Button */}
-      <div
+      {/* <div
         style={{
           display: "flex",
           justifyContent: "center",
@@ -1179,10 +1179,10 @@ function Home() {
             <i className="fa-solid fa-arrow-right"></i>
           </span>
         </button>
-      </div>
+      </div> */}
 
       {/* Floating Terminal Button */}
-      <div
+      {/* <div
         id="floating-terminal-btn"
         onClick={() => (window.location.href = "terminal.html")}
         style={{
@@ -1218,10 +1218,10 @@ function Home() {
           e.target.style.boxShadow = "0 8px 32px rgba(0, 0, 0, 0.1)"; // Lighter shadow
         }}
       >
-        <i className="fa-solid fa-terminal" style={{ color: "#000000" }}></i>{" "}
+        <i className="fa-solid fa-terminal" style={{ color: "#000000" }}></i>{" "} */}
         {/* Black icon */}
-        <span style={{ color: "#000000" }}>Terminal</span> {/* Black text */}
-      </div>
+        {/* <span style={{ color: "#000000" }}>Terminal</span> Black text */}
+      {/* </div> */}
 
       {/* Add CSS Animation */}
       <style>
