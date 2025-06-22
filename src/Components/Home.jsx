@@ -252,38 +252,51 @@ function Home() {
                 </a> */}
               </span>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 intro-box">
               <div className="mb-5">
                 <h2 className="section-title">
                   <b>ABOUT ME</b>{" "}
                 </h2>
-                <p style={{ textAlign: "left" }}>
-                  Passionate about building tech that solves real-world
-                  problems. <br></br>
-                  <br></br>
-                  Strong Communication Skills, and a Proven Track Record in
-                  Frontend, Backend, and Software Development. A Dedicated
-                  Problem Solver and Collaborative Team Player. Technology
-                  excites me and I am always in awe of the change it drives in
-                  the world. <br></br>
-                  <br></br>
-                  Technical Proficiency: <br></br>
-                  🔹Languages: Proficient in Python, PHP, Java, C, C++,
-                  JavaScript <br></br>
-                  🔹Frameworks & Stack: <br></br> - .NET<br></br> - MERN Stack{" "}
-                  <br></br>- Flask (Python Web Framework)<br></br> - Eel (Python
-                  + JS desktop apps)<br></br> 🔹Database: MySQL, SQLite3,
-                  MongoDB<br></br> 🔹Tools & Technologies: Git, AWS, Google
-                  Cloud, Firebase
-                  <br></br>
-                  <br></br>I’m also actively solving DSA problems, building
-                  consistency (100+ days and counting!), and participating in
-                  tech communities like GSSoC, IIRS-ISRO, and Google Cloud
-                  Arcade.
-                  <br></br>
-                  <br></br>And what I might lack in skills I make up for with my
-                  determination to learn.
-                </p>
+                <div className="about-section">
+                  <p>
+                    Passionate about building tech that solves real-world
+                    problems.
+                  </p>
+                  <p>
+                    Strong communication skills and a proven track record in
+                    frontend, backend, and software development. A dedicated
+                    problem solver and collaborative team player. Technology
+                    excites me, and I am always in awe of the change it drives
+                    in the world.
+                  </p>
+
+                  <h4>Technical Proficiency</h4>
+                  <ul>
+                    <li>
+                      <strong>Languages:</strong> Python, PHP, Java, C, C++,
+                      JavaScript
+                    </li>
+                    <li>
+                      <strong>Frameworks & Stack:</strong>
+                      <ul>
+                        <li>MERN Stack</li>
+                        <li>Flask (Python Web Framework)</li>
+                        <li>Eel (Python + JS desktop apps)</li>
+                        <li>.NET</li>
+                      </ul>
+                    </li>
+                    <li><strong>Database:</strong> MySQL, SQLite3, MongoDB</li>
+                    <li><strong>Tools & Technologies:</strong> Git, AWS, Google Cloud, Firebase</li>
+                  </ul>
+
+                  <p>
+                    I’m also actively solving DSA problems, building consistency (100+ days and counting!), and participating in tech communities like GSSoC, IIRS-ISRO, and Google Cloud Arcade.
+                  </p>
+
+                  <p>
+                    And what I might lack in skills, I make up for with my determination to learn.
+                  </p>
+                </div>
               </div>
 
               {/* <div className="mb-5">
@@ -309,7 +322,7 @@ function Home() {
                 </div>
               </div> */}
 
-              <div>
+              <div className="about-section" style={{ textAlign: "center" }}>
                 <h2 className="section-title">
                   <b>MY MISSION</b>
                 </h2>
@@ -373,12 +386,24 @@ function Home() {
                   />
                 </a>
               </div>
-              <div style={{ flex: 1, padding: "20px" }}>
-                <h2 className="project-title">SURVEILX </h2><br></br><h3>An Advanced Surveillance System</h3><br></br>
+              <div className="project-card" style={{ flex: 1, padding: "20px" }}>
+                <h2 className="project-title">SURVEILX </h2>
+                
+                  <hr />
+                
+                <h3>An Advanced Surveillance System</h3>
                 <div className="project-details">
-                  {/* <span>PYTHON DEVELOPMENT</span> */}
-                  <span>(DESKTOP APP)</span>
-                  <span>[01]</span>
+                  <div className="tech-stack-section">
+                    <h5>Technology Stack:</h5>
+                    <div className="tech-stack-buttons">
+                      {[
+                        "Python", "YOLOv5", "OpenCV", "NumPy",
+                        "Flask", "SQLite3", "Eel", "Twilio", "SMTP"
+                      ].map((tech, index) => (
+                        <span className="tech-chip" key={index}>{tech}</span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
